@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
     <!-- <m-header></m-header> -->
-    <div>微信授权</div>
+    <div>微信授权22</div>
 	</view>
 </template>
 
