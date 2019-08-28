@@ -5,6 +5,24 @@
 			"style": {
 				"navigationBarTitleText": "DoDoMusic"
 			}
+		},
+		{
+			"path": "pages/singer/index",
+			"style": {
+				"navigationBarTitleText": "DoDoMusic"
+			}
+		},
+		{
+			"path": "pages/rank/index",
+			"style": {
+				"navigationBarTitleText": "DoDoMusic"
+			}
+		},
+		{
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "DoDoMusic"
+			}
 		}
 	],
 	"globalStyle": {
