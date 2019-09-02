@@ -2,6 +2,7 @@
   <view class="page">
     <v-header></v-header>
     <v-tab></v-tab>
+    <view>test1</view>
   </view>
 </template>
 
