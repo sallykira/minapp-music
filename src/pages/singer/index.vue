@@ -1,9 +1,9 @@
 <template>
-  <view class="page">
+  <div class="page">
     <v-header></v-header>
-    <v-tab></v-tab>
-    <view>test1</view>
-  </view>
+    <v-tab :currentPage="currentPage"></v-tab>
+    <div>singer</div>
+  </div>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      title: "Hello"
+      currentPage: 'singer'
     };
   },
   onLoad() {

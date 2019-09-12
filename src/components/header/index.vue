@@ -2,9 +2,6 @@
   <div class="m-header">
     <img class="logo" src="../../common/img/logo.png" />
     <h1 class="text">DoDoMusic</h1>
-    <!-- <router-link tag="div" class="mine" to="/user"> -->
-    <!-- <i class="icon-mine"></i> -->
-    <!-- </router-link> -->
   </div>
 </template>
 

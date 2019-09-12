@@ -1,5 +1,5 @@
 <template>
-  <view class="swiper-container">
+  <div class="swiper-container">
     <swiper
       class="swiper"
       :indicator-dots="indicatorDots"
@@ -9,21 +9,23 @@
       :interval="interval"
       :duration="duration"
     >
-      <swiper-item>
-        <view class="swiper-item">A</view>
-      </swiper-item>
-      <swiper-item>
-        <view class="swiper-item">B</view>
-      </swiper-item>
-      <swiper-item>
-        <view class="swiper-item">C</view>
+      <swiper-item v-for="(item,index) in list" :key="index">
+        <div class="swiper-item" @click="goWebView(item.linkUrl)">
+          <image class="swiper-pic" :src="item.picUrl" mode="aspectFill"></image>
+        </div>
       </swiper-item>
     </swiper>
-  </view>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
 export default {
+  props: {
+    list: {
+      type: Array,
+      default: []
+    }
+  },
   data() {
     return {
       indicatorDots: true,
@@ -31,8 +33,18 @@ export default {
       indicatorColor: 'rgba(255, 255, 255, 0.5)',
       autoplay: true,
       interval: 2000,
-      duration: 500
+      duration: 500,
+      circular: true
     };
+  },
+  mounted () {
+  },
+  methods: {
+    goWebView(url) {
+      uni.navigateTo({
+        url: `/pages/webView/index?webViewUrl=${encodeURIComponent(url)}`
+      });
+    }
   }
 };
 </script>
@@ -44,9 +56,13 @@ export default {
   }
   .swiper-item {
     display: block;
-    height: 300upx;
-    line-height: 300upx;
+    // height: 300upx;
     text-align: center;
+    .swiper-pic{
+      display: block;
+      height: 300upx;
+      width: 100%;
+    }
   }
   .swiper-list {
     margin-top: 40upx;

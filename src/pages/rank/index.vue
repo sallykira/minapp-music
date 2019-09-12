@@ -1,8 +1,9 @@
 <template>
-  <view class="page">
+  <div class="page">
     <v-header></v-header>
-    <v-tab></v-tab>
-  </view>
+    <v-tab :currentPage="currentPage"></v-tab>
+    <div>rank</div>
+  </div>
 </template>
 
 <script>
@@ -13,7 +14,7 @@ export default {
   },
   data() {
     return {
-      title: "Hello"
+      currentPage: 'rank'
     };
   },
   onLoad() {
