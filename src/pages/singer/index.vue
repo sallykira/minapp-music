@@ -14,15 +14,32 @@ export default {
   },
   data() {
     return {
-      currentPage: 'singer'
+      currentPage: 'singer',
+      singerList: []
     };
   },
   onLoad() {
-    this.getList();
+    this.getSingerList();
   },
   methods: {
-    getList() {
-      
+    getSingerList() {
+      uni.request({
+        url:
+          "http://localhost:3000/top/artists",
+        data: {
+          // text: "uni.request"
+        },
+        header: {
+          "custom-header": "hello" //自定义请求头信息
+        },
+        success: res => {
+          console.log(res.data.code)
+          if (res.data.code == 200) {
+            this.singerList = res.data.artists;
+            console.log(res.data.artists)
+          }
+        }
+      });
     }
   }
 };

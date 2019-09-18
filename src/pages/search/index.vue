@@ -18,11 +18,26 @@ export default {
     };
   },
   onLoad() {
-    this.getList();
+    // this.getList();
   },
   methods: {
-    getList() {
-      
+    getToplist() {
+      uni.request({
+        url:
+          "http://localhost:3000/toplist/detail",
+        data: {
+          // text: "uni.request"
+        },
+        header: {
+          "custom-header": "hello" //自定义请求头信息
+        },
+        success: res => {
+          console.log(res)
+          if (res.data.code == 200) {
+            this.topList = res.data.list;
+          }
+        }
+      });
     }
   }
 };

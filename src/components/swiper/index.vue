@@ -11,7 +11,7 @@
     >
       <swiper-item v-for="(item,index) in list" :key="index">
         <div class="swiper-item" @click="goWebView(item.linkUrl)">
-          <image class="swiper-pic" :src="item.picUrl" mode="aspectFill"></image>
+          <image class="swiper-pic" :src="item.imageUrl" mode="aspectFill"></image>
         </div>
       </swiper-item>
     </swiper>

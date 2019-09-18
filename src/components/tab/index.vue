@@ -7,13 +7,13 @@
     >
       <div class="tab-link">推荐</div>
     </navigator>
-    <navigator
+    <!-- <navigator
       url="/pages/singer/index"
       :class="['tab-item', currentPage === 'singer' && 'on']"
       hover-class="navigator-hover"
     >
       <div class="tab-link">歌手</div>
-    </navigator>
+    </navigator> -->
     <navigator
       url="/pages/rank/index"
       open-type="navigate"
